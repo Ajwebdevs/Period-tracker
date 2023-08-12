@@ -1,0 +1,184 @@
+body {
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 9, 58);
+    overflow-x: hidden;
+
+}
+input{
+    width: 45vh;
+    height: 5vh;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+.container{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    padding: 35px;
+    padding-top: 10px;
+    /*border: 2px solid #000;*/
+    border-radius: 20px;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.80), -13px -8px 20px 0px #542ec533;
+}
+.container-input-day{
+    padding-left: 50%;
+    padding-right: 50%;
+    padding-top: -2vh;
+    border: none;
+    background: none;
+}
+.container-input-day{
+    border: none;
+    background: none;
+    width: -100px;
+}
+.container-input-date{
+    position: relative;
+    max-width: fit-content;
+}
+.date1{
+    position: absolute;
+}
+h1{
+    color: #ffff;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 25px #542ec533;
+    size: 15px;
+    text-transform: capitalize;
+}
+.text{
+    text-size-adjust: 25px;
+    text-transform: capitalize;
+    padding-top: 0px;
+    padding-right: 0px;
+
+}
+input[type="date"]{
+    background-color: #542ec533;
+    padding: 14px;
+    transform: translate(-50%,-50%);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.80), -13px -8px 20px 0px #542ec533;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+.blood{
+    width: 50px;
+    position: absolute;
+}
+
+.image-container{
+    position: relative;
+    align-items: center;
+    left: 47%;
+}
+.container-input-day{
+    position: relative;
+}
+.days{
+    background-color: #542ec533;
+    padding: 14px;
+    transform: translate(-50%,-50%);
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.80), -13px -8px 20px 0px #542ec533;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    position: absolute;
+}
+.container-input-button-settings{
+    cursor: pointer;
+    padding: 10px 45px;
+    /*imp*/
+    margin-top: 2px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: none;
+    background: none;
+    background-color: #542ec533;
+    color: #ffffff;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.80), -13px -8px 20px 0px #542ec533;
+    border-radius: 50px;
+}
+.container-input-button-settings:hover{
+    box-shadow: inset -13px -8px 20px 0px #542ec533, inset 12px 12px 20px rgba(0, 0, 0, 0.80);
+    color: #fff;
+}
+
+.container2 {
+    height:60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.container-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    padding: 35px;
+    padding-top: 10px;
+    /*border: 2px solid #000;*/
+    border-radius: 20px;
+    text-transform: capitalize;
+    text-align: justify;
+    text-overflow: none;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.80), -13px -8px 20px 0px #542ec533;
+}
+
+.container-result-date h2{
+    color: white;
+}
+.container-result-ovulation-date h2{
+    color: white;
+}
+.container-result-fertility-period h2{
+    color: white;
+    size: 5vh;
+}
+
+
+
+
+
+
+
+
+/*media only*/
+@media only screen and (min-width: 813px) {
+    .container .container2 {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1273px) {
+    .container .container2 {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 593px) {
+    .container .container2 {
+        width: 100%;
+        margin: 0 20px;
+    }
+}

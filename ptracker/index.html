@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periods and cycles tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+
+<body>
+    <h1 class="text">PERIOD'S CALCULATOR BY ARJUN</h1>
+    <div class="image-container">
+        <img src="blood.png" class="blood">
+    </div>
+    </div>
+    <!--container for date input------>
+    <div class="container">
+
+        <div class="container-input">
+            <!---input start date----->
+            <h1>Period start date</h1>
+            <div class="container-input-date">
+                <br>
+                <input class="date1" type="date" id="input">
+            </div>
+            <br>
+            <!---input stop date---->
+            <h1>Period end date</h1>
+            <div class=" container-input-date">
+                <br>
+                <input class="date1" type="date" id="input">
+            </div>
+            <br>
+            <!---period days-->
+            <h1>Avg cycle length</h1>
+            <div class=" container-input-day">
+                <br>
+                <input class="days" id="period" placeholder="Enter number of days....">
+            </div>
+            <!--submit button-->
+            <br>
+            <br>
+            <br>
+            <div class=" container-input-button">
+                <button class="container-input-button-settings" id="button">Calculate</button>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="container2">
+        <!---results container-->
+        <div class="conatiner-result">
+            <!---period result date-->
+            <div class="container-result-date">
+                <h2>Your period is due on : </h2>
+                <h2 id="result"></h2>
+            </div>
+            <!--ovulation due date--->
+            <div class="container-result-ovulation-date">
+                <h2>Your ovulation day : </h2>
+                <h2 id="result-ovulation"></h2>
+            </div>
+            <!--fertility period-->
+            <div class="container-result-fertility-period">
+                <h2>Your fertility period : </h2>
+                <h2 id="result-fertility"></h2>
+                <h2 id="result-fertility2"></h2>
+            </div>
+        </div>
+    </div>
+</body>
+<!--This is gonna be our script for the period tracker-->
+<script>
+    var input = document.getElementById("input");
+    var period = document.getElementById("period");
+    var button = document.getElementById("button");
+
+    function periodDue() {
+        var showInp = input.value;
+        var showPer = period.value;
+        var date = new Date(showInp);
+        var day = date.getDate();
+        var periodDay = parseInt(showPer);
+        var periodDue = new Date(date.setDate(day + periodDay));
+        var periodDueDate = periodDue.toDateString();
+        var result = document.getElementById('result');
+        result.innerHTML = periodDueDate;
+    }
+    function ovulationDay(){
+        var showInp = input.value;
+        var showPer = period.value;
+        var date = new Date(showInp);
+        var day = date.getDate();
+        var periodDay = parseInt(showPer);
+        var ovulationDay = new Date(date.setDate(day+periodDay-14));
+        var ovulationDayDate = ovulationDay.toDateString();
+        var result = document.getElementById("result-ovulation");
+        result.innerHTML = ovulationDayDate;
+    }
+
+    function fertilityPeriod(){
+        var showInp = input.value;
+        var showPer = period.value;
+        var date = new Date(showInp);
+        var day = date.getDate();
+        var periodDay = parseInt(showPer);
+        var fertilityPeriod = new Date(date.setDate(day+periodDay-17));
+        var fertilityPeriodDate = fertilityPeriod.toDateString();
+        var result = document.getElementById('result-fertility');
+        result.innerHTML = `From- ${fertilityPeriodDate}`;
+
+    }
+
+    function fertilityPeriod2(){
+        var showInp = input.value;
+        var showPer = period.value;
+        var date = new Date(showInp);
+        var day = date.getDate();
+        var periodDay = parseInt(showPer);
+        var fertilityPeriod = new Date(date.setDate(day+periodDay-14));
+        var fertilityPeriodDate = fertilityPeriod.toDateString();
+        var result = document.getElementById('result-fertility2');
+        result.innerHTML = `To- ${fertilityPeriodDate}`;
+
+    }
+
+
+
+    button.addEventListener("click", () => {
+        periodDue();
+        ovulationDay();
+        fertilityPeriod();
+        fertilityPeriod2()
+    })
+
+</script>
+
+</html>
